@@ -4,8 +4,8 @@ module Rubel
     # on numbers and are application independent.
     module Defaults
       def MAP(elements, attr_name)
-        elements = [elements] unless elements.is_a?(::Array) 
-        
+        elements = elements.is_a?(::Array) ? elements.dup : [elements]
+
         elements.tap(&:flatten!).map! do |a| 
           if attr_name.respond_to?(:call)
              a.instance_exec(&attr_name)

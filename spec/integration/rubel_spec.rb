@@ -54,6 +54,11 @@ describe do
       execute("MAP([5.124], round(SUM(1)))").should == 5.1
     end
 
+    it 'should not modify arguments to MAP' do
+      arr = [1, 2, 3]
+      expect { @rubel.MAP(arr, 'to_f * 2') }.to_not change { arr }
+    end
+
     pending do
       # Disabled block support. looks cool, but does not work
       # with method_missing, etc. So rather confusing.
