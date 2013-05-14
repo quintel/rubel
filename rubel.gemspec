@@ -2,8 +2,8 @@
 require File.expand_path('../lib/rubel/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["hasclass"]
-  gem.email         = ["sebi.burkhard@gmail.com"]
+  gem.authors       = ["hasclass", "antw"]
+  gem.email         = ["sebi.burkhard@gmail.com", "hi@antw.me"]
   gem.description   = %q{ruby enterprise language. Run excel-like formulas ruby code. E.g. SUM(MAP(KEY_ACCOUNTS(), revenue))}
   gem.summary       = %q{A dsl for excel-like formulas to run as regular rubycode. E.g. SUM(MAP(KEY_ACCOUNTS(), revenue))}
   gem.homepage      = "http://hasclass.com/rubel"
