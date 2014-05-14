@@ -105,6 +105,11 @@ describe do
       message.name.should eql(:foo)
       message.arguments.should eql([:bar, :baz, 42])
     end
+
+    it 'should permit raising errors' do
+      expect { @sandbox.execute("raise 'nope'") }.to raise_error(/nope/)
+      expect { @sandbox.execute("fail 'nope'") }.to raise_error(/nope/)
+    end
   end
 
 

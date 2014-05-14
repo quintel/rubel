@@ -55,6 +55,12 @@ module Rubel
       def sanitize!(string)
         string.gsub!('::', '')
       end
+
+      def raise(*args)
+        ::Kernel.raise(*args)
+      end
+
+      alias_method :fail, :raise
     end
   end
 end
