@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 describe do
-  it "should spec" do
-    true.should be_true
-  end
-
   context "Runtime::Loader" do
     after do
       ENV['RAILS_ENV'] = 'test'
@@ -78,8 +74,8 @@ describe do
     before { @sandbox = Rubel::Runtime::Sandbox.new }
     it "should *not* restrict from accessing classes." do
       lambda {
-        @sandbox.execute(-> { File.new })
-      }.should_not raise_error(NameError)
+        @sandbox.execute(-> { File })
+      }.should_not raise_error
     end
 
     it "should restrict from accessing classes" do

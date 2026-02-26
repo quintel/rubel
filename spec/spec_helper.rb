@@ -5,6 +5,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require 'support/coverage'
 require 'rubel'
 
 RSpec.configure do |config|
